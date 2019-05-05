@@ -18,7 +18,7 @@ class AdminForm extends Component {
                         <li><input type="date" className="dateInput" name={formName+"dateInput"} value={dateInput} onChange={handleChange}/></li>
                         <li><input type="radio" name={formName+"radioInput"} onChange={handleCheck}/></li>
                     </ul>
-                </div>
+        </div>
 
         );
     }

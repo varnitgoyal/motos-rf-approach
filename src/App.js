@@ -4,6 +4,7 @@ import CompanyDetails from './components/addCompanyInfo/AddCompanyInfo';
 import AssignProducts from './components/assignProducts/AssignProducts';
 import SetupAdmins from './components/setupAdmins/SetupAdmins';
 import './mainstylesheet/mainstyle.css';
+import ProgressBar from './components/progressBar/ProgressBar';
 
 class App extends Component{
   state ={
@@ -26,6 +27,7 @@ class App extends Component{
     return (
         <div className="App">
           <Header />
+          <ProgressBar className="progress-bar" progress="78" completed="third"/>
           {step === 0 && <CompanyDetails nextStep={this.nextStep} backStep={this.backStep}/> }
           {step === 1 && <AssignProducts nextStep={this.nextStep} backStep={this.backStep}/>}
           {step === 2 && <SetupAdmins backStep={this.backStep}/>}
