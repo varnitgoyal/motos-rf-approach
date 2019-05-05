@@ -1,0 +1,138 @@
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; }
+
+.formwrapper {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 40px; }
+
+header {
+  background: #F8F9FA;
+  padding: 10px;
+  box-shadow: 0px 0px 7px 5px #c4c4c4; }
+  header .logo-image {
+    height: 33px;
+    width: 118px; }
+  header .search-icon {
+    background: #cccaca;
+    border-radius: 20px;
+    padding: 8px 12px;
+    margin-right: 20px;
+    color: #fff; }
+  header .fa-user-circle {
+    font-size: 40px;
+    line-height: 1.2;
+    color: #cccaca; }
+
+.next-btn {
+  float: right;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.back-btn {
+  float: left;
+  margin-bottom: 20px;
+  margin-top: 20px; }
+
+.companyDetails label, .assignProducts label {
+  width: 50%; }
+.companyDetails .form-check-inline, .assignProducts .form-check-inline {
+  margin-bottom: 30px; }
+  .companyDetails .form-check-inline .form-check-input, .assignProducts .form-check-inline .form-check-input {
+    height: 20px;
+    width: 20px; }
+  .companyDetails .form-check-inline label, .assignProducts .form-check-inline label {
+    width: 100%;
+    color: #000; }
+
+.assignProducts {
+  border-bottom: 1px solid #adaaaa;
+  padding-left: 50px; }
+  .assignProducts .fixedRate {
+    padding-left: 24px;
+    padding-bottom: 30px; }
+    .assignProducts .fixedRate .selectRequired {
+      font-size: 14px;
+      color: #8d8a8a; }
+    .assignProducts .fixedRate .form-check {
+      margin-bottom: 10px; }
+      .assignProducts .fixedRate .form-check .form-check-label {
+        color: #000; }
+    .assignProducts .fixedRate .requiredCheck {
+      padding-left: 23px;
+      font-size: 12px;
+      color: #8d8a8a; }
+    .assignProducts .fixedRate .taxText {
+      font-size: 14px;
+      color: #7a7676;
+      padding-top: 20px; }
+    .assignProducts .fixedRate .tax input[type=checkbox], .assignProducts .fixedRate .tax input[type=radio] {
+      width: 20px;
+      height: 20px; }
+    .assignProducts .fixedRate .tax .tax-label {
+      line-height: 1.8;
+      padding-left: 10px; }
+    .assignProducts .fixedRate .incomeTax {
+      padding: 0;
+      max-width: 300px;
+      width: 100%; }
+
+.paymentMethod {
+  padding-top: 25px;
+  padding-bottom: 20px; }
+  .paymentMethod .paymentContent {
+    font-style: italic;
+    font-size: 14px;
+    padding-left: 10px; }
+  .paymentMethod input[type=checkbox], .paymentMethod input[type=radio] {
+    width: 20px;
+    height: 20px; }
+  .paymentMethod .payment-label {
+    line-height: 1.8;
+    padding-left: 10px; }
+  .paymentMethod .funds {
+    padding-left: 20px; }
+    .paymentMethod .funds .payment-label {
+      width: 50%; }
+  .paymentMethod .concur .payment-label {
+    padding-bottom: 8px; }
+  .paymentMethod .payFreq {
+    padding-top: 35px; }
+  .paymentMethod .payFreqLabel {
+    padding-left: 50px; }
+
+.driverManagement {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  border-top: 1px solid #adaaaa; }
+  .driverManagement input[type=radio] {
+    width: 20px;
+    height: 20px; }
+  .driverManagement .driverManageOptions {
+    padding-left: 70px;
+    padding-top: 10px; }
+    .driverManagement .driverManageOptions .payment-label {
+      line-height: 1.8;
+      padding-left: 10px; }
+
+.fixedPaySchedule {
+  padding-top: 25px;
+  padding-bottom: 20px; }
+  .fixedPaySchedule input[type=radio] {
+    width: 20px;
+    height: 20px; }
+  .fixedPaySchedule .fpContent {
+    font-style: italic;
+    font-size: 14px;
+    padding-left: 10px; }
+  .fixedPaySchedule .fixedPayOptions {
+    padding-left: 70px;
+    padding-top: 10px; }
+    .fixedPaySchedule .fixedPayOptions .payment-label {
+      line-height: 1.8;
+      padding-left: 10px; }
+
+/*# sourceMappingURL=mainstyle.css.map */
