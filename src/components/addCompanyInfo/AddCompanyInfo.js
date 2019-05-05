@@ -3,13 +3,20 @@ import {connect} from 'react-redux';
 import {addCompanyInfo} from '../action/Action';
 import '../../mainstylesheet/mainstyle.css';
 
-export default class CompanyDetails extends Component {
+class CompanyDetails extends Component {
     constructor(props) {
+        console.log("constructor called with props",props)
         super(props);
-        console.log('props', props);
         this.state = {
             ...props.company,
         }
+    }
+
+    componentWillMount(props){
+        console.log("CWM called")
+        // // this.setState({
+        //     ...props.company
+        // })
     }
 
     handleChange = (event) => {
@@ -34,7 +41,8 @@ export default class CompanyDetails extends Component {
     }
 
     render() {
-        let {cname, calias, date, industry, accountManager, country, addr1, addr2, city, state, zipcode, phone} = this.state
+        let {cname, calias, date, industry, accountManager, country, addr1, addr2, city, state, zipcode, phone} = this.state;
+
         return (
             <>
                 <form className="form1" onSubmit={this.handleSubmit}>
@@ -145,11 +153,11 @@ export default class CompanyDetails extends Component {
 }
 
 const mapStateToProps = state => ({
-    company: state.company,
+    company: state.Company,
 })
 
 const mapDispatchToProps = dispatch => ({
     addCompanyInfo: (data) => dispatch(addCompanyInfo(data))
 })
 
-CompanyDetails = connect(mapStateToProps, mapDispatchToProps)(CompanyDetails);
+export default  connect(mapStateToProps, mapDispatchToProps)(CompanyDetails);

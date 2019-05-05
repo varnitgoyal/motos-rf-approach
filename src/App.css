@@ -19,13 +19,7 @@
   color: white;
 }
 
-.parent{
-  display: none;
-  max-width: 400px;
-  width: 100%;
-  margin:0 auto;
-  padding-top:20px;
-}
+
 
 .App-link {
   color: #61dafb;
