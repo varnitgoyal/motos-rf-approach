@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKA,iBAAiB;EAChB,UAAU,EAAE,IAAI",
+"sources": ["styleProduct.scss"],
+"names": [],
+"file": "styleProduct.css"
+}
