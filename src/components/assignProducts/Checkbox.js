@@ -32,6 +32,7 @@ class Checkbox extends Component{
                       name={name}
                       defaultChecked={productData[name]}
                       onChange={this.handleCheck}
+                      onCheck={this.handleCheck}
             
              />
              </label>

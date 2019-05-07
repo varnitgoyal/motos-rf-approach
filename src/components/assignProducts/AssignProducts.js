@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import {checkboxesConfig,extraOptionsCheckboxConfig} from './checkboxesConfig';
+import {radioButtonConfig} from './radioButtonsConfig'
 import Checkbox from './Checkbox';
 import './stylesheetProducts/styleProduct.css';
+import RadioButton from './RadioButton';
 
 class AssignProducts extends Component {
     constructor(props) {
@@ -65,13 +67,30 @@ class AssignProducts extends Component {
                             )):null
                        }
 
+                       
 
 
+                 
           
 
                 </li>
+
               ))
             }
+            </ul>
+
+            <ul>
+                {
+                    radioButtonConfig.map(item=>(
+                        <li>
+                            <RadioButton
+                                        name={item.name}
+                                        label={item.label}
+                            />
+
+                        </li>
+                ))
+                }
             </ul>
             <div className="container">
                 <button type="button" className="btn btn-secondary back-btn" variant="primary"
