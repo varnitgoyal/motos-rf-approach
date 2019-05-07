@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { product } from '../action/Action';
-import {checkboxesConfig} from './checkboxesConfig';
+import {checkboxesConfig,extraOptionsCheckboxConfig} from './checkboxesConfig';
 import Checkbox from './Checkbox';
 import './stylesheetProducts/styleProduct.css';
 
@@ -10,34 +8,25 @@ class AssignProducts extends Component {
         super(props);
         console.log('props', props);
         this.state = {
-            checkedItems:[]
+         
         };
     }
 
-    handleCheck = (e) =>{
-        const item = e.target.name;
-        const isChecked = e.target.checked;
-        console.log("printing event in handle check",e);
-
+    handleCallback=({item,isChecked})=>{
         this.setState({
             [item]:isChecked
-
         })
-        //this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));
+
     }
 
     handleSubmit = (event) => {
-        const{productData,product}=this.props;
         event.preventDefault();
-        console.log("Data after Input--> ",this.state);
         this.props.nextStep();
-        product({...this.state});
     }
 
     render() {
         const {productData}=this.props;
-        console.log(productData["fixedRate"])
-        console.log("printing productData inside render method",productData);
+     
         return(
         <form onSubmit={this.handleSubmit}>
             <h2 className="products-heading">Enabled Products</h2>
@@ -45,18 +34,40 @@ class AssignProducts extends Component {
             {
               checkboxesConfig.map(item=>(
                 <li>
-                    <label key={item.key}>
-                        {item.label}
+              
 
                         <Checkbox
                             name={item.name}
-                            onChange={this.handleCheck}
-                            defaultChecked={productData[item.name]}
-                            ComponentToRender={item.component}
-                            currentStatus={this.state[item.name]}/>
+                            callback={this.handleCallback}
+                            label={item.label}
+                           
+                          />
+                        {this.state.fixedRate && item.name==="fixedRate" ? 
+                        extraOptionsCheckboxConfig.map(item=>(
+                            <Checkbox
+                            name={"form1"+item.name}
+                            label={item.label}/>
+                            )):null
+                       }
+                        {this.state.centMile && item.name==="centMile" ? 
+                        extraOptionsCheckboxConfig.map(item=>(
+                            <Checkbox
+                            name={"form2"+item.name}
+                            label={item.label}/>
+                            )):null
+                       }
+
+                      {this.state.techOnly && item.name==="techOnly" ? 
+                        extraOptionsCheckboxConfig.map(item=>(
+                            <Checkbox
+                            name={"form3"+item.name}
+                            label={item.label}/>
+                            )):null
+                       }
 
 
-                    </label>
+
+          
 
                 </li>
               ))
@@ -76,12 +87,4 @@ class AssignProducts extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    productData: state.Product,
-})
-
-const mapDispatchToProps = dispatch => ({
-    product: (data) => dispatch(product(data))
-})
-
-export default connect(mapStateToProps,mapDispatchToProps)(AssignProducts);
+export default AssignProducts;

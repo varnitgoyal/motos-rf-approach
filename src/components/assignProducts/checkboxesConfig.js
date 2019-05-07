@@ -23,7 +23,7 @@ const checkboxesConfig = [
     }
 ]
 const extraOptionsCheckboxConfig = [
-    {
+     {
         name: 'InsuranceDeclaration',
         key: 'checkBox2',
         label: 'Insurance Declaration'

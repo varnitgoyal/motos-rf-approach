@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Checkbox from './Checkbox';
-import { checkboxesConfig ,  extraOptionsCheckboxConfig } from './checkboxesConfig';
+import { extraOptionsCheckboxConfig } from './checkboxesConfig';
 import {product} from "../action/Action";
 import {connect} from "react-redux";
 
@@ -33,7 +33,7 @@ class ExtraOptions extends Component {
             <div>
                 <ul>
                     {
-                        checkboxesConfig.map(item=>(
+                        extraOptionsCheckboxConfig.map(item=>(
                             <li>
                                 <label>
                                      {item.label}

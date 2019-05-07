@@ -1,36 +1,52 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ExtraOptions from './ExtraOptions';
+import React,{Component} from 'react';
+import { product } from '../action/Action';
+import { connect } from 'react-redux';
 
-const Checkbox = ({ type = 'checkbox', name, defaultChecked, onChange, ComponentToRender,currentStatus}) => {
-// console.log("printing component to render",ComponentToRender);
-    let Component;
-//    const {componentToRender ,defaultChecked } = this.props;
-    if(ComponentToRender==="ExtraOptions"){
-        Component=ExtraOptions;
+class Checkbox extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+
+        }
     }
-  return (
-      <div>
-      <input
-          type={type}
-          name={name}
-          defaultChecked={defaultChecked}
-          onChange={(e) => onChange(e)}
+    handleCheck = (e) =>{
+        const{product}=this.props;
+        let callback=this.props.callback || function(){};
+        const item = e.target.name;
+        const isChecked = e.target.checked;
+        console.log("printing event in handle check",e);
+        callback({item,isChecked});
+        product({[item]:isChecked})
+    
+    }
 
-      />
-
-      {currentStatus ?  <Component/>  : null }
-      </div>
-
-      )
-
-};
-
-Checkbox.propTypes = {
-    type: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    checked: PropTypes.bool,
-    onChange: PropTypes.func.isRequired,
+    render(){
+        const {productData,name,label}=this.props;
+        
+        return(
+            <div>
+            <label>
+                {label}
+            <input
+                      type="checkbox"
+                      name={name}
+                      defaultChecked={productData[name]}
+                      onChange={this.handleCheck}
+            
+             />
+             </label>
+             </div>
+        )
+            
+        
+    }
 }
+const mapStateToProps = state => ({
+    productData: state.Product,
+})
 
-export default Checkbox;
+const mapDispatchToProps = dispatch => ({
+    product: (data) => dispatch(product(data))
+})
+
+export default connect(mapStateToProps,mapDispatchToProps)(Checkbox);
