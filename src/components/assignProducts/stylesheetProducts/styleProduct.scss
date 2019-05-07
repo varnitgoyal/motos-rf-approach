@@ -1,0 +1,8 @@
+@mixin heading($size,$color){
+  font-size: $size;
+  color:$color;
+}
+
+.enabled-products{
+ list-style: none;
+}

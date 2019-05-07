@@ -1,51 +1,22 @@
 .setupAdmins {
   margin-top: 50px; }
-  .setupAdmins .wrapper {
-    border: 1px solid gray;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto; }
-    .setupAdmins .wrapper .heading .list {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 10px 0; }
-      .setupAdmins .wrapper .heading .list li {
-        list-style: none; }
-        .setupAdmins .wrapper .heading .list li:nth-child(2) {
-          padding-left: 9px; }
-        .setupAdmins .wrapper .heading .list li:nth-child(3) {
-          padding-left: 18px; }
-        .setupAdmins .wrapper .heading .list li:last-child {
-          width: 5%; }
-    .setupAdmins .wrapper .input {
-      border-top: 1px solid black; }
-      .setupAdmins .wrapper .input .list {
-        display: flex;
-        justify-content: space-between;
-        padding: 24px 10px; }
-        .setupAdmins .wrapper .input .list li {
-          list-style: none; }
-          .setupAdmins .wrapper .input .list li input {
-            padding: 10px;
-            width: 100%; }
-          .setupAdmins .wrapper .input .list li .dateInput {
-            padding: 9px 12px; }
-          .setupAdmins .wrapper .input .list li:nth-child(4) {
-            padding-right: 15px; }
-          .setupAdmins .wrapper .input .list li:last-child {
-            width: 4%;
-            line-height: 3; }
-          .setupAdmins .wrapper .input .list li input[type=radio] {
-            width: 20px;
-            height: 20px; }
-    .setupAdmins .wrapper .addMore {
-      border-top: 1px solid black;
-      padding: 20px 20px; }
-      .setupAdmins .wrapper .addMore .addBtn {
-        border-radius: 50%;
-        background: transparent;
-        border: 1px solid black; }
-        .setupAdmins .wrapper .addMore .addBtn:hover {
-          cursor: pointer; }
+  .setupAdmins .table {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid lightgray; }
+    .setupAdmins .table .list input[type="text"] {
+      padding: 10px;
+      border: 1px solid lightgray; }
+    .setupAdmins .table .list input[type="date"] {
+      padding: 9px;
+      border: 1px solid lightgray; }
+  .setupAdmins .addBtn {
+    border-radius: 50%;
+    background: transparent;
+    color: #d3d3d3;
+    border: 1px solid  #d3d3d3;
+    outline: 0; }
+    .setupAdmins .addBtn:hover {
+      cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */

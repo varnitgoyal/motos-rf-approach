@@ -10,15 +10,16 @@ class AdminForm extends Component {
         return (
 
 
-                <div className="input">
-                    <ul className="list">
-                        <li><input type="text" name={formName+"firstInput"} value={firstInput} onChange={handleChange}/></li>
-                        <li><input type="text" name={formName+"secondInput"} value={secondInput} onChange={handleChange}/></li>
-                        <li><input type="text" name={formName+"thirdInput"} value={thirdInput} onChange={handleChange}/></li>
-                        <li><input type="date" className="dateInput" name={formName+"dateInput"} value={dateInput} onChange={handleChange}/></li>
-                        <li><input type="radio" name={formName+"radioInput"} onChange={handleCheck}/></li>
-                    </ul>
-        </div>
+
+                    <tr className="list">
+                        <td><input type="text" name={formName+"firstInput"} value={firstInput} onChange={handleChange}/></td>
+                        <td><input type="text" name={formName+"secondInput"} value={secondInput} onChange={handleChange}/></td>
+                        <td><input type="text" name={formName+"thirdInput"} value={thirdInput} onChange={handleChange}/></td>
+                        <td><input type="date" className="dateInput" name={formName+"dateInput"} value={dateInput} onChange={handleChange}/></td>
+                        <td><input type="radio" name={formName+"radioInput"} onChange={handleCheck}/></td>
+                        <td><i className="fas fa-trash-alt"></i></td>
+                    </tr>
+
 
         );
     }

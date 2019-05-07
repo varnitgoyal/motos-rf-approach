@@ -44,24 +44,24 @@ class CompanyDetails extends Component {
         let {cname, calias, date, industry, accountManager, country, addr1, addr2, city, state, zipcode, phone} = this.state;
 
         return (
-            <>
                 <form className="form1" onSubmit={this.handleSubmit}>
+                    <div className="form-check">
+                        <input className="form-check-input" name="demoCompany" type="checkbox"
+                               id="inlineCheckbox1" onChange={this.handleCheck}/>
+                        <label className="form-check-label">This a demo company.</label>
+                    </div>
                     <div className="formwrapper">
-                        <div className="companyDetails">
-                            <div className="form-check form-check-inline">
-                                <input className="form-check-input" name="demoCompany" type="checkbox"
-                                       id="inlineCheckbox1" onChange={this.handleCheck}/>
-                                <label className="form-check-label">This a demo company.</label>
-                            </div>
+                        <div className="company-info">
+
                             <div className="form-group">
                                 <label>Company Name</label>
                                 <input type="text" name="cname" className="form-control" value={cname}
-                                       onChange={this.handleChange} required/>
+                                       onChange={this.handleChange} />
                             </div>
                             <div className="form-group">
                                 <label>Company Alias</label>
                                 <input type="text" name="calias" className="form-control" value={calias}
-                                       onChange={this.handleChange} required/>
+                                       onChange={this.handleChange} />
                             </div>
                         </div>
 
@@ -124,13 +124,13 @@ class CompanyDetails extends Component {
                                     <label>State</label>
                                     <select name="state" className="form-control" value={state}
                                             onChange={this.handleChange}>
+                                        <option>Rajasthan</option>
                                         <option>New Delhi</option>
-                                        <option>Noida</option>
-                                        <option>Gurugram</option>
+                                        <option>Assam</option>
                                     </select>
                                 </div>
 
-                                <div className="col form-group">
+                                <div className="form-group">
                                     <label>ZIP Code</label>
                                     <input type="text" name="zipcode" className="form-control" value={zipcode}
                                            onChange={this.handleChange}/>
@@ -144,10 +144,10 @@ class CompanyDetails extends Component {
                         </div>
                     </div>
                     <div className="container">
-                        <button type="submit" className="btn btn-primary next-btn" variant="primary">Next --></button>
+                        <button type="submit" className="next-btn" variant="primary">Next --></button>
                     </div>
                 </form>
-            </>
+
         );
     }
 }
